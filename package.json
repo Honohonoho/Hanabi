@@ -1,5 +1,5 @@
 {
-  "name": "webpack4_test",
+  "name": "hanabi",
   "version": "1.0.0",
   "description": "",
   "main": "dist/lib/index",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Honohonoho/webpack4_test.git"
+    "url": "git+https://github.com/Honohonoho/Hanabi.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Honohonoho/webpack4_test/issues"
+    "url": "https://github.com/Honohonoho/Hanabi/issues"
   },
-  "homepage": "https://github.com/Honohonoho/webpack4_test#readme",
+  "homepage": "https://github.com/Honohonoho/Hanabi#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
