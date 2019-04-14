@@ -25,7 +25,9 @@
         "esModuleInterop": true, // not use 'allowSyntheticDefaultImports', so use 'import xx from xx' to replace 'import * as xx from xx'
         "noUnusedLocals": true
     },
-    "include": [],
+    "include": [
+        "lib/**/*"
+    ],
     "exclude": [
         "node_modules",
         "build",
