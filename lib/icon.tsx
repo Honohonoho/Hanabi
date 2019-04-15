@@ -9,7 +9,7 @@ const Icon: React.FunctionComponent<IconProps> = (props) => {
     return (
         <span>
             <svg>
-                <use xinkHref={`#${props.name}`}/>
+                <use xlinkHref={`#${props.name}`}/>
             </svg>
         </span>
     );
