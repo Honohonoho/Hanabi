@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Icon from './icon';
 
-const fn = (e: React.MouseEvent<SVGElement | SVGUseElement>) => {
+const fn: React.MouseEventHandler = (e) => {
     console.log(e);
     console.log(e.target);
     console.log((e.target as SVGUseElement).href);
