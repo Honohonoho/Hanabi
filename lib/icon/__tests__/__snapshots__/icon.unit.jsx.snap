@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`icon should  1`] = `
+exports[`icon icon render successfully 1`] = `
 <svg
   className="h-icon"
 >
