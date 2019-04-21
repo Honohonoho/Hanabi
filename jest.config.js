@@ -1,13 +1,10 @@
 // https://jestjs.io/docs/en/configuration.html
-
+// test 时用配置
 module.exports = {
     verbose: true,
     clearMocks: false,
     collectCoverage: false,
-    collectCoverageFrom: ["{lib,include}/**/*.{ts,tsx}", "!**/node_modules/**"],
-    coverageDirectory: 'coverage',
-    coverageReporters: ['text', 'lcov'],
-    reporters: ["default", "jest-junit"],
+    reporters: ["default"],
     moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
     moduleDirectories: ['node_modules'],
     globals: {
