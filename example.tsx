@@ -28,9 +28,9 @@ ReactDOM.render(
                         </ul>
                     </aside>
                     <main>
-                        <Route path="/icon" component={IconExample}></Route>
-                        <Route path="/button" component={ButtonExample}></Route>
-                        <Route path="/dialog" component={DialogExample}></Route>
+                        <Route path="/icon" component={IconExample} />
+                        <Route path="/button" component={ButtonExample} />
+                        <Route path="/dialog" component={DialogExample} />
                     </main>
                 </div>
             </div>
