@@ -1,0 +1,8 @@
+// all classes begin with 'h-' will have below style
+[class^=h-] {
+  box-sizing: border-box;
+  &::before,
+  &::after{
+    box-sizing: border-box;
+  }
+}

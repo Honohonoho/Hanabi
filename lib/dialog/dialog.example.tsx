@@ -7,7 +7,7 @@ export default function () {
         <div>
             <button onClick={() => {setX(!x);}}>click</button>
             <Dialog visible={x}>
-                <span>hi</span>
+                <span>Dialog Content Dialog Content Dialog Content Dialog Content Dialog Content</span>
             </Dialog>
         </div>
     );

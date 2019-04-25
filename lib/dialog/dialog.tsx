@@ -20,7 +20,7 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
                         <Icon name="close"/>
                     </div>
                     <header className={className('header')}>
-                        提示
+                        Dialog Title
                     </header>
                     <main className={className('body')}>
                         {props.children}
