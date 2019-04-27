@@ -5,8 +5,16 @@ export default function () {
     const [x, setX] = useState(false);
     return (
         <div>
-            <button onClick={() => {setX(!x);}}>click</button>
-            <Dialog visible={x}>
+            <button className="h-button" onClick={() => {setX(!x);}}>click</button>
+            <Dialog visible={x} closeOnClickMask={true}
+                buttons={
+                    [
+                        <button className="h-button" style={{marginRight: "5px"}} onClick={() => {setX(false);}}>Ok</button>,
+                        <button className="h-button" onClick={() => {setX(false);}}>Cancel</button>
+                    ]
+                }
+                onClose={() => {setX(false);}}
+            >
                 <span>Dialog Content Dialog Content Dialog Content Dialog Content Dialog Content</span>
             </Dialog>
         </div>
