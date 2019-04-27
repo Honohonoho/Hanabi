@@ -2,6 +2,7 @@ import React, {ReactNode, Fragment, ReactElement} from 'react';
 import './dialog.scss';
 import Icon from '../icon/icon';
 import {classNamePrefix} from '../classes';
+import ReactDOM from 'react-dom';
 
 interface Props {
     visible: boolean;
@@ -23,10 +24,10 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
         }
     };
 
-    return (
+    const dialog =
         props.visible ?
             <Fragment>
-                <div className={className('mask')} onClick={onClickMask} />
+                <div className={className('mask')} onClick={onClickMask}/>
                 <div className={className()}>
                     <div className={className('close')} onClick={onClickClose}>
                         <Icon name="close"/>
@@ -44,8 +45,11 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
                         })}
                     </footer>
                 </div>
-            </Fragment> :
-            null
+            </Fragment>
+            :
+            null;
+    return (
+        ReactDOM.createPortal(dialog, document.body)
     );
 };
 Dialog.defaultProps = {
