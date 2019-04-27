@@ -63,3 +63,23 @@
     border-bottom-right-radius: 3px;
   }
 }
+.h-button {
+  vertical-align: middle;
+  height: 28px;
+  min-width: 44px;
+  padding: 0 16px;
+  border: 1px solid $button-border-color-default;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 26px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  color: $button-color;
+  background-color: transparent;
+  transition: border-color 200ms ease-out;
+  &:hover {
+    border-color: $button-border-color-hover;
+  }
+}
