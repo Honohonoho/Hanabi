@@ -1,4 +1,4 @@
-import React, {ReactNode, Fragment, ReactElement} from 'react';
+import React, {ReactNode, Fragment, ReactElement, ReactFragment} from 'react';
 import './dialog.scss';
 import Icon from '../icon/icon';
 import {classNamePrefix} from '../classes';
@@ -56,13 +56,15 @@ Dialog.defaultProps = {
     closeOnClickMask: false
 };
 const alert = (content: string) => {
+    const onClose = () => {
+        ReactDOM.render(React.cloneElement(component, {visible: false}), div);
+        ReactDOM.unmountComponentAtNode(div);
+        div.remove();
+    };
     const component =
         <Dialog visible={true}
-                onClose={() => {
-                    ReactDOM.render(React.cloneElement(component, {visible: false}), div);
-                    ReactDOM.unmountComponentAtNode(div);
-                    div.remove();
-                }}
+                onClose={onClose}
+                buttons={[<button onClick={onClose}>OK</button>]}
         >
             {content}
         </Dialog>;
@@ -98,5 +100,23 @@ const confirm = (content: string, confirm?: () => void, cancel?: () => void) => 
     document.body.append(div);
     ReactDOM.render(component, div);
 };
-export {alert, confirm};
+const model = (content: ReactNode | ReactFragment) => {
+    const onClose = () => {
+        ReactDOM.render(React.cloneElement(component, {visible: false}), div);
+        ReactDOM.unmountComponentAtNode(div);
+        div.remove();
+    };
+    const component = (
+        <Dialog visible={true}
+                onClose={onClose}
+        >
+            {content}
+        </Dialog>
+    );
+    const div = document.createElement('div');
+    document.body.append(div);
+    ReactDOM.render(component, div);
+    return onClose;
+};
+export {alert, confirm, model};
 export default Dialog;
