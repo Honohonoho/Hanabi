@@ -1,4 +1,4 @@
-import React, {ReactNode, Fragment, ReactElement, ReactFragment} from 'react';
+import React, {ReactNode, Fragment, ReactElement} from 'react';
 import './dialog.scss';
 import Icon from '../icon/icon';
 import {classNamePrefix} from '../classes';
@@ -102,7 +102,7 @@ const confirm = (content: string, confirm?: () => void, cancel?: () => void) => 
     document.body.append(div);
     ReactDOM.render(component, div);
 };
-const model = (content: ReactNode | ReactFragment) => {
+const model = (content: ReactNode) => {
     const onClose = () => {
         ReactDOM.render(React.cloneElement(component, {visible: false}), div);
         ReactDOM.unmountComponentAtNode(div);
