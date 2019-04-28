@@ -58,11 +58,11 @@ Dialog.defaultProps = {
 const alert = (content: string) => {
     const component =
         <Dialog visible={true}
-            onClose={() => {
-                ReactDOM.render(React.cloneElement(component, {visible: false}), div);
-                ReactDOM.unmountComponentAtNode(div);
-                div.remove();
-            }}
+                onClose={() => {
+                    ReactDOM.render(React.cloneElement(component, {visible: false}), div);
+                    ReactDOM.unmountComponentAtNode(div);
+                    div.remove();
+                }}
         >
             {content}
         </Dialog>;
@@ -70,5 +70,33 @@ const alert = (content: string) => {
     document.body.append(div);
     ReactDOM.render(component, div);
 };
-export {alert};
+const confirm = (content: string, confirm?: () => void, cancel?: () => void) => {
+    const confirmFn = () => {
+        ReactDOM.render(React.cloneElement(component, {visible: false}), div);
+        ReactDOM.unmountComponentAtNode(div);
+        div.remove();
+        confirm && confirm();
+    };
+    const cancelFn = () => {
+        ReactDOM.render(React.cloneElement(component, {visible: false}), div);
+        ReactDOM.unmountComponentAtNode(div);
+        div.remove();
+        cancel && cancel();
+    };
+    const component = (
+        <Dialog visible={true}
+                onClose={cancelFn}
+                buttons={[
+                    <button onClick={confirmFn}>confirm</button>,
+                    <button onClick={cancelFn}>cancel</button>
+                ]}
+        >
+            {content}
+        </Dialog>
+    );
+    const div = document.createElement('div');
+    document.body.append(div);
+    ReactDOM.render(component, div);
+};
+export {alert, confirm};
 export default Dialog;
