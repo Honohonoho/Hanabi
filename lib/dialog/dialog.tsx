@@ -38,12 +38,14 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
                     <main className={className('body')}>
                         {props.children}
                     </main>
+                    {props.buttons && props.buttons.length > 0 &&
+                     // set key for each button element
                     <footer className={className('footer')}>
-                        {/* set key for each button element */}
                         {props.buttons && props.buttons.map((button, index) => {
                             return React.cloneElement(button, {key: index});
                         })}
                     </footer>
+                    }
                 </div>
             </Fragment>
             :
