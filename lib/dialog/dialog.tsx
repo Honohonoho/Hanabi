@@ -63,11 +63,13 @@ const model = (content: ReactNode, buttons?: Array<ReactElement>, afterClose?: (
         ReactDOM.render(React.cloneElement(component, {visible: false}), div);
         ReactDOM.unmountComponentAtNode(div);
         div.remove();
-        afterClose && afterClose();
     };
     const component =
         <Dialog visible={true}
-                onClose={closeModel}
+                onClose={() => {
+                    closeModel();
+                    afterClose && afterClose();
+                }}
                 buttons={buttons}
         >
             {content}
