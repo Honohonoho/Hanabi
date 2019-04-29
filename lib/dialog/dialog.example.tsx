@@ -15,7 +15,7 @@ export default function () {
         <div>
             <div>
                 <button className="h-button" onClick={() => {setX(!x);}}>click</button>
-                <Dialog visible={x} closeOnClickMask={true}
+                <Dialog visible={x} closeOnClickMask={true} enableMask={false}
                         buttons={
                             [
                                 <button className="h-button" style={{marginRight: '5px'}}

@@ -10,6 +10,7 @@ interface Props {
     buttons?: Array<ReactElement>;
     onClose: React.MouseEventHandler;
     closeOnClickMask?: boolean; // not required attribute
+    enableMask?: boolean;
 }
 
 const className = classNamePrefix('h-dialog');
@@ -27,7 +28,9 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
     const dialog =
         props.visible ?
             <Fragment>
-                <div className={className('mask')} onClick={onClickMask}/>
+                {props.enableMask &&
+                    <div className={className('mask')} onClick={onClickMask}/>
+                }
                 <div className={className()}>
                     <div className={className('close')} onClick={onClickClose}>
                         <Icon name="close"/>
@@ -55,7 +58,8 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
     );
 };
 Dialog.defaultProps = {
-    closeOnClickMask: false
+    closeOnClickMask: false,
+    enableMask: true
 };
 // model 为基础Dialog， confirm 和 alert API 可在 model 基础上扩展而来
 const model = (content: ReactNode, buttons?: Array<ReactElement>, afterClose?: () => void) => {
