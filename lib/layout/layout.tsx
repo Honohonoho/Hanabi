@@ -1,6 +1,5 @@
 import React from 'react';
 import {classNamePrefix} from '../classesHelper';
-import '../utils/classes';
 import './layout.scss';
 
 const scopeClass = classNamePrefix('h-layout');

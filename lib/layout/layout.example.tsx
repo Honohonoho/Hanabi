@@ -9,7 +9,7 @@ export default function () {
         <div>
             <h2>example one</h2>
             <Layout style={{height: 200}} className="layout">
-                 <Header></Header>
+                <Header></Header>
                 <Content></Content>
                 <Footer></Footer>
             </Layout>

@@ -3,9 +3,18 @@ import {classNamePrefix} from '../classesHelper';
 
 const scopeClass = classNamePrefix('h-layout');
 
-const Footer: React.FunctionComponent = () => {
+interface Props extends React.HTMLAttributes<HTMLElement>{
+
+}
+
+const Footer: React.FunctionComponent<Props> = (props) => {
+    const {className, ...restProps} = props;
     return (
-        <div className={scopeClass('footer')}>footer</div>
+        <div className={scopeClass('footer', {extra: className})}
+             {...restProps}
+        >
+            {props.children}
+        </div>
     );
 };
 
