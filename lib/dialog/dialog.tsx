@@ -1,8 +1,8 @@
 import React, {ReactNode, Fragment, ReactElement} from 'react';
 import './dialog.scss';
 import Icon from '../icon/icon';
-import {classNamePrefix} from '../classesHelper';
 import ReactDOM from 'react-dom';
+import {classNamePrefix} from '../utils/classesHelper';
 
 interface Props {
     visible: boolean;
@@ -35,7 +35,7 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
                     <div className={scopeClass('close')} onClick={onClickClose}>
                         <Icon name="close"/>
                     </div>
-                    <header className={scopeClass('Header')}>
+                    <header className={scopeClass('header')}>
                         Dialog Title
                     </header>
                     <main className={scopeClass('body')}>

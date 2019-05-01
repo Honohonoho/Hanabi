@@ -1,7 +1,7 @@
 import React, {ReactElement} from 'react';
-import {classNamePrefix} from '../classesHelper';
 import './layout.scss';
 import Aside from './aside';
+import {classNamePrefix} from '../utils/classesHelper';
 
 const scopeClass = classNamePrefix('h-layout');
 

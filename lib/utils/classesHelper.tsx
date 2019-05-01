@@ -1,3 +1,9 @@
+function classes(...names: (string | undefined)[]) {
+    return names.filter(Boolean).join(' ');
+}
+
+export default classes;
+
 interface extraClass {
     extra: string | undefined;
 }
@@ -18,7 +24,7 @@ function classNamePrefix(prefix: string) {
         } else {
             name2 = Object.entries(name).filter(kv => kv[1]).map(kv => kv[0]);
             result = name2.map(n => {
-                 return [prefix, n].filter(Boolean).join('-');
+                return [prefix, n].filter(Boolean).join('-');
             }).join(' ');
         }
         // const result = [prefix, name2].filter(Boolean).join('-');
