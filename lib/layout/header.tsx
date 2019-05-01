@@ -13,7 +13,7 @@ const Header: React.FunctionComponent<Props> = (props) => {
         <div className={scopeClass('header', {extra: className})}
              {...restProps}
         >
-            header
+            {props.children}
         </div>
     );
 };
