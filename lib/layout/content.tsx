@@ -1,10 +1,13 @@
 import React from 'react';
+import {classNamePrefix} from '../classesHelper';
 
-const content: React.FunctionComponent = () => {
+const scopeClass = classNamePrefix('h-layout');
+
+const Content: React.FunctionComponent = () => {
     return (
-        <div></div>
+        <div className={scopeClass('content')}>content</div>
     );
 };
 
-export default content;
+export default Content;
 

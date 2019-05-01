@@ -8,10 +8,10 @@ export default function () {
     return (
         <div>
             <h2>example one</h2>
-            <Layout>
-                <Header>header</Header>
-                <Content>content</Content>
-                <Footer>footer</Footer>
+            <Layout style={{height: 200}} className="layout">
+                 <Header></Header>
+                <Content></Content>
+                <Footer></Footer>
             </Layout>
         </div>
     );

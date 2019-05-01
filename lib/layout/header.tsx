@@ -1,10 +1,13 @@
 import React from 'react';
+import {classNamePrefix} from '../classesHelper';
 
-const header: React.FunctionComponent = () => {
+const scopeClass = classNamePrefix('h-layout');
+
+const Header: React.FunctionComponent = () => {
     return (
-        <div></div>
+        <div className={scopeClass('header')}>header</div>
     );
 };
 
-export default header;
+export default Header;
 

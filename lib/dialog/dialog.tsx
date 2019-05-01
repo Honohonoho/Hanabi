@@ -1,7 +1,7 @@
 import React, {ReactNode, Fragment, ReactElement} from 'react';
 import './dialog.scss';
 import Icon from '../icon/icon';
-import {classNamePrefix} from '../classes';
+import {classNamePrefix} from '../classesHelper';
 import ReactDOM from 'react-dom';
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
     enableMask?: boolean;
 }
 
-const className = classNamePrefix('h-dialog');
+const scopeClass = classNamePrefix('h-dialog');
 
 const Dialog: React.FunctionComponent<Props> = (props) => {
     const onClickClose: React.MouseEventHandler = (e) => {
@@ -29,21 +29,21 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
         props.visible ?
             <Fragment>
                 {props.enableMask &&
-                    <div className={className('mask')} onClick={onClickMask}/>
+                    <div className={scopeClass('mask')} onClick={onClickMask}/>
                 }
-                <div className={className()}>
-                    <div className={className('close')} onClick={onClickClose}>
+                <div className={scopeClass()}>
+                    <div className={scopeClass('close')} onClick={onClickClose}>
                         <Icon name="close"/>
                     </div>
-                    <header className={className('header')}>
+                    <header className={scopeClass('Header')}>
                         Dialog Title
                     </header>
-                    <main className={className('body')}>
+                    <main className={scopeClass('body')}>
                         {props.children}
                     </main>
                     {props.buttons && props.buttons.length > 0 &&
                     // set key for each button element
-                    <footer className={className('footer')}>
+                    <footer className={scopeClass('footer')}>
                         {props.buttons && props.buttons.map((button, index) => {
                             return React.cloneElement(button, {key: index});
                         })}

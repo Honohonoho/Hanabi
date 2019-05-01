@@ -1,10 +1,13 @@
 import React from 'react';
+import {classNamePrefix} from '../classesHelper';
 
-const footer: React.FunctionComponent = () => {
+const scopeClass = classNamePrefix('h-layout');
+
+const Footer: React.FunctionComponent = () => {
     return (
-        <div></div>
+        <div className={scopeClass('footer')}>footer</div>
     );
 };
 
-export default footer;
+export default Footer;
 
