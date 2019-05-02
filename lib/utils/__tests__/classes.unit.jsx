@@ -1,5 +1,5 @@
 import classes, {classNamePrefix} from '../classesHelper';
-
+import 'jest';
 describe('classes', () => {
     it('accept one class', function () {
         const result = classes('any-icon')
@@ -28,4 +28,4 @@ describe('classNamePrefix', () => {
         expect(scopeClass({'header': true, 'active': true}, {extra: 'active'}))
             .toEqual('h-layout-header h-layout-active active');
     })
-})
+});
