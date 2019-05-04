@@ -36,19 +36,33 @@ $padding: 16px;
 }
 
 .site-aside {
-  padding: $padding;
+  padding-top: $padding;
   margin-right: 16px;
   border-right: 1px solid rgba(0, 0, 0, 0.2);
   h2 {
-
+    padding: 0 $padding;
   }
   ul {
     padding-top: $padding;
     min-width: 10em;
     > li {
-      padding: $padding 0;
       a {
-        color: $main-color;
+        display: block;
+        padding: $padding;
+        color: #595959;
+        background: #ffffff;
+        transition: background-color 0.3s, color 0.3s, border-right-color 0.3s;
+        &.active {
+          border-right: 2px solid $main-color;
+          background: $soft-main-color;
+          color: #ffffff;
+        }
+        &.active:hover {
+          color: #ffffff;
+        }
+        &:hover {
+          color: $soft-main-color;
+        }
       }
     }
   }
