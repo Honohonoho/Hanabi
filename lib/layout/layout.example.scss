@@ -1,33 +1,33 @@
-.layout {
+.ex-layout {
   max-width: 800px;
   min-width: 300px;
-  margin: 0 auto;
+  min-height: 200px;
 }
-.h-layout-header {
+.ex-header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  min-height: 60px;
   background: #F2F2F2;
   color: #333333;
 }
-.h-layout-content {
+.ex-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  min-height: 120px;
   background: #CCCCCC;
   color: #fff;
 }
-.h-layout-footer {
+.ex-footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  min-height: 60px;
   background: #F2F2F2;
   color: #333333;
 }
-.h-layout-aside {
+.ex-aside {
   flex: 0 0 200px;
   display: flex;
   justify-content: center;

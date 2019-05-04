@@ -10,36 +10,36 @@ export default function () {
     return (
         <div>
             <h2>example one</h2>
-            <Layout style={{height: 200}} className="layout">
-                <Header className="x">header</Header>
-                <Content>content</Content>
-                <Footer>footer</Footer>
+            <Layout className="ex-layout">
+                <Header className="ex-header">header</Header>
+                <Content className="ex-content">content</Content>
+                <Footer className="ex-footer">footer</Footer>
             </Layout>
             <h2>example two</h2>
-            <Layout style={{height: 200}} className="layout">
-                <Header>header</Header>
+            <Layout className="ex-layout">
+                <Header className="ex-header">header</Header>
                 <Layout>
-                    <Aside>aside</Aside>
-                    <Content>content</Content>
+                    <Aside className="ex-aside">aside</Aside>
+                    <Content className="ex-content">content</Content>
                 </Layout>
-                <Footer>footer</Footer>
+                <Footer className="ex-footer">footer</Footer>
             </Layout>
             <h2>example three</h2>
-            <Layout style={{height: 200}} className="layout">
-                <Header>header</Header>
+            <Layout className="ex-layout">
+                <Header className="ex-header">header</Header>
                 <Layout>
-                    <Content>content</Content>
-                    <Aside>aside</Aside>
+                    <Content className="ex-content">content</Content>
+                    <Aside className="ex-aside">aside</Aside>
                 </Layout>
-                <Footer>footer</Footer>
+                <Footer className="ex-footer">footer</Footer>
             </Layout>
             <h2>example four</h2>
-            <Layout style={{height: 200}} className="layout">
-                <Aside>aside</Aside>
+            <Layout className="ex-layout">
+                <Aside className="ex-aside">aside</Aside>
                 <Layout>
-                    <Header>header</Header>
-                    <Content>content</Content>
-                    <Footer>footer</Footer>
+                    <Header className="ex-header">header</Header>
+                    <Content className="ex-content">content</Content>
+                    <Footer className="ex-footer">footer</Footer>
                 </Layout>
             </Layout>
         </div>
