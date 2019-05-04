@@ -1,22 +1,19 @@
 @import '../config';
 
 .h-layout {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  &.has-aside {
-    flex-direction: row;
-    .h-layout {
-      flex-direction: column;
-    }
-  }
   &-content {
     flex-grow: 1;
-    border: 1px solid green;
   }
   & & {
     flex-direction: row;
     flex-grow: 1;
-    border: 1px solid #666;
+  }
+  &-has-aside {
+    flex-direction: row;
+    .h-layout {
+      flex-direction: column;
+    }
   }
 }

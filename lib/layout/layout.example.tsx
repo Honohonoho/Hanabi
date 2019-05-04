@@ -4,13 +4,14 @@ import Aside from './aside';
 import Header from './header';
 import Content from './content';
 import Footer from './footer';
+import './layout.example.scss';
 
 export default function () {
     return (
         <div>
             <h2>example one</h2>
             <Layout style={{height: 200}} className="layout">
-                <Header>header</Header>
+                <Header className="x">header</Header>
                 <Content>content</Content>
                 <Footer>footer</Footer>
             </Layout>

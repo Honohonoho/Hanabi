@@ -31,7 +31,7 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
                 {props.enableMask &&
                     <div className={scopeClass('mask')} onClick={onClickMask}/>
                 }
-                <div className={scopeClass()}>
+                <div className={scopeClass('')}>
                     <div className={scopeClass('close')} onClick={onClickClose}>
                         <Icon name="close"/>
                     </div>

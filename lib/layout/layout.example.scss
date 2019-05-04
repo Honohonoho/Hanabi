@@ -1,0 +1,37 @@
+.layout {
+  max-width: 800px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+.h-layout-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background: #F2F2F2;
+  color: #333333;
+}
+.h-layout-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background: #CCCCCC;
+  color: #fff;
+}
+.h-layout-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background: #F2F2F2;
+  color: #333333;
+}
+.h-layout-aside {
+  flex: 0 0 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #B3B3B3;
+  color: #fff;
+}
