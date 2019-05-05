@@ -6,7 +6,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, 'dist/lib'),
-        library: 'test',
+        library: 'Hanabi UI',
         libraryTarget: 'umd'
     },
     resolve: {
