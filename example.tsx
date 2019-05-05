@@ -9,6 +9,8 @@ import './lib/index.scss';
 import {Layout, Aside, Content, Footer, Header} from './lib/layout/layout';
 import './example.scss';
 const logo = require('./logo.png');
+const x = require('!!raw-loader!./lib/icon/icon.example.tsx');
+console.info(x.default);
 
 ReactDOM.render(
     <div>
