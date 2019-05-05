@@ -9,13 +9,16 @@ $main-color: #ed8074;
 $soft-main-color: #f6bfb9;
 $padding: 16px;
 
+.prism-code {
+  padding: 16px;
+}
+
 .site-page {
   background: #ffffff;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .site-main-wrap {
-  //flex-grow: 1;
   .site-main {
     padding-top: $padding;
   }

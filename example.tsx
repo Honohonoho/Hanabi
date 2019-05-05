@@ -8,9 +8,8 @@ import LayoutExample from './lib/layout/layout.example';
 import './lib/index.scss';
 import {Layout, Aside, Content, Footer, Header} from './lib/layout/layout';
 import './example.scss';
+
 const logo = require('./logo.png');
-const x = require('!!raw-loader!./lib/icon/icon.example.tsx');
-console.info(x.default);
 
 ReactDOM.render(
     <div>
@@ -18,7 +17,7 @@ ReactDOM.render(
             <Layout className="site-page">
                 <Header className="site-header">
                     <div className="logo">
-                    <img src={logo} alt="Hanabi"/>
+                        <img src={logo} alt="Hanabi"/>
                         {/*<span>Hanabi UI</span>*/}
                     </div>
                 </Header>
